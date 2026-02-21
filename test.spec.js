@@ -34,4 +34,9 @@ describe('Data Processing', () => {
     const result = processData(input);
     expect(result).to.deep.equal([-2, -4, 6]);
   });
+
+  it('should handle single element array', () => {
+    const result = processData([7]);
+    expect(result).to.deep.equal([14]);
+  });
 });
