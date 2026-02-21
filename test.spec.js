@@ -39,4 +39,15 @@ describe('Data Processing', () => {
     const result = processData([7]);
     expect(result).to.deep.equal([14]);
   });
+
+  it('should filter by multiple conditions', () => {
+    const items = [
+      { id: 1, active: true, role: 'admin' },
+      { id: 2, active: true, role: 'user' },
+      { id: 3, active: false, role: 'admin' },
+    ];
+    const result = filterItems(items, item => item.active && item.role === 'admin');
+    expect(result).to.have.lengthOf(1);
+    expect(result[0].id).to.equal(1);
+  });
 });
