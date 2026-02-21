@@ -48,3 +48,13 @@
   background-color: #e8f5e9;
   color: #2e7d32;
 }
+
+.badge--error {
+  background-color: #fdecea;
+  color: #b71c1c;
+}
+
+.badge--warning {
+  background-color: #fff8e1;
+  color: #f57f17;
+}

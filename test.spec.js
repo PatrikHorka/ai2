@@ -2,7 +2,7 @@ const { expect } = require('chai');
 const { processData, filterItems } = require('./feature');
 
 describe('Data Processing', () => {
-  it('should return sorted results', () => {
+  it('should return doubled results', () => {
     const input = [5, 3, 1, 4, 2];
     const result = processData(input);
     expect(result).to.deep.equal([2, 6, 10, 4, 8]);
