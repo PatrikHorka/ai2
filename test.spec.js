@@ -50,4 +50,10 @@ describe('Data Processing', () => {
     expect(result).to.have.lengthOf(1);
     expect(result[0].id).to.equal(1);
   });
+
+  it('should return empty array when no items match', () => {
+    const items = [{ id: 1, active: false }];
+    const result = filterItems(items, item => item.active);
+    expect(result).to.be.an('array').that.is.empty;
+  });
 });
